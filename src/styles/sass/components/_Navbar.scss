@@ -1,0 +1,111 @@
+/*
+Navbar
+*/ 
+.navbar { 
+  background-color: $nav-bg-color !important;
+  box-shadow: 0 4px 4px rgba(0,0,0,.1);
+  // Logo
+  .navbar-brand {
+    margin: auto 1em;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: $text-color;
+    // Logo image
+    img {
+      width: 50%;
+      padding: 10px;
+      padding-bottom: 1rem;
+    }
+    // Logo text
+    h1 {
+      font-weight: 800;
+      letter-spacing: 2px;
+      font-size: 2.5rem;
+      margin-bottom: 0;
+      padding: 0;
+      font-family: $logo-font;
+      &:before {
+        content:'New';
+        display: block;
+        margin-bottom: -25px;
+        font-size:  2.5rem;
+        font-weight: 800;
+      }
+    }
+  } 
+  // Nav links div
+  .navbar-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .active {
+      color: #ffff;
+    }
+    // Links
+    a {
+      color: $text-color;
+      font-family: $logo-font;
+      margin: 0 1em;
+      letter-spacing: 5px;
+      font-weight: 600;
+      color: $text-color;
+      font-size: 1.5em;
+      transition: all .5s;
+      &:hover {
+        color: #ffff;
+      }
+    }
+  }
+}
+
+/*
+Reponsive icon
+*/ 
+#Fabar {
+  display: none;
+}
+
+/*
+Reponsive design
+*/ 
+@media (max-width: 991px) {
+  .navbar {
+    align-items: flex-start;
+    padding: 0;
+    .navbar-brand {
+      margin-top: 0;
+    }
+    h1 {
+      font-size: 3rem !important;
+      letter-spacing: 5px !important;
+    }
+    .navbar-nav {
+      justify-content: flex-start;
+      height: 100vh;
+      display: none;
+      font-size: 1.5rem;
+      .nav-link {
+        margin: 1em auto;
+      }
+    }
+    .navbar-nav-active {
+      display: flex;
+    }
+  } 
+  #Fabar {
+    display: block;
+    transform: translate(-100%, 75%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    color: $text-color;
+    transition: all .5s;
+    cursor: pointer;
+    &:hover {
+      color: #ffff;
+    }
+  }
+}

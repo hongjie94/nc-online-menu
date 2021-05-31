@@ -1,0 +1,28 @@
+
+*,::before,::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $main-font;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  background: $bg-color;
+  color: $text-color;
+}
+
+.app {
+  background: $bg-color;
+  overflow: hidden;
+}
+
+@media (max-width: 991px) {
+  .body-active {
+    overflow: hidden;
+  }
+}
+  

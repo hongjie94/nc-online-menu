@@ -1,0 +1,342 @@
+/*
+Main Menu
+*/
+.MainMenu {
+  min-height: 80vh;
+  background-color: $text-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .menuOptions {
+    width: 100%;
+    min-height: 65vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2em;
+    a {
+      text-decoration: none;
+      color:#fffe;
+    }  
+    .option_cn, .option_thai {
+      margin:2em;
+      width: 100%;
+      height:75vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+      background-size: cover;
+      border-radius: 10px;
+      max-width: 370px;
+      max-height: 500px;
+      h1 {
+        margin-bottom: 0;
+        padding: .5em;
+        background: rgba(0, 0, 0, 0.1);
+        width: 100%;
+        height: 100%;
+        font-family: $logo-font;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3em;
+      }
+    }
+    .option_cn {
+      flex: 1;
+      background: linear-gradient(to right, rgba(0.0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
+      url('/images/Menu/Cnbg.png') no-repeat;
+      background-color: #EFE4CA;
+      background-repeat: no-repeat;
+      background-size: cover; 
+      &:hover {
+        h1{
+          background: rgba(0, 0, 0, 0.1);
+        }
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
+        url('/images/Menu/optionCn.jpeg') no-repeat center center; 
+        background-size: cover;  
+      }
+    }
+    .option_thai {
+      flex: 1;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+      url('/images/Menu/thaibg.png') no-repeat;
+      background-color: #263238;
+      background-repeat: no-repeat;
+      background-size: cover; 
+      &:hover {
+        h1{
+          background: rgba(0, 0, 0, 0.0);
+        }
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+        url('/images/Menu/optionThai.jpeg') no-repeat center center;
+        background-size: cover; 
+      }
+    }
+  }  
+}
+
+@media screen and (max-width: 920px) {
+  .MainMenu {
+    .menuOptions {
+      flex-direction: column;
+      align-items: center; 
+    }
+  }
+}
+@media screen and (max-width: 382px) {
+  .MainMenu {
+    .menuOptions {
+      .option_cn, .option_thai {
+        h1 {
+          font-size: 2em;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 280px) {
+  .MainMenu {
+    .menuOptions {
+      .option_cn, .option_thai {
+        h1 {
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+}
+
+
+/*
+Chinese Menu
+*/
+.chineseMenu {
+  background-image: url('/images/Menu/menubg1.jpeg');
+  background-position: center center;
+  background-size: contain;
+  color: $text-color;
+  padding: 2em;
+  min-height: 80vh;
+  img {
+    filter: contrast(.6);
+  }
+  .MenuContents {
+    // background-image: url('/components/Home/sections/imgs/menubg.jpeg');
+    // background-position: center center;
+    // background-size: contain;
+    color: $text-color;
+    //Menu Search Field
+    .CategorySearch {
+      border: none !important;
+      padding: 0;
+      min-width: 15em;
+    }
+    .react-search-field-input {
+      font-size: 1em!important;
+      font-weight: 200!important;
+    }
+    .react-search-field-button {
+      border-right: 1px solid rgb(221, 221, 221) !important;
+      order: -1;
+      svg {
+        margin-bottom: 10px !important;
+      }
+    }
+     // Menu Category
+    .MenuCategory {
+      .MobileCategory {
+        display: none
+      }
+      ul {
+        text-align: center;
+        padding-left: 0;
+        padding-right: 3em;
+        list-style: none;
+        cursor: pointer;
+        background: linear-gradient(to right, rgba(243, 243, 243, 0.2), rgba(243, 235, 235, 0));
+        a {
+          font-weight: 500;
+          border: 2px solid $text-color;
+          padding: 0.5em 2em;
+          border-radius: 5px;
+          display: flex;
+          justify-content: center;
+          text-decoration: none;
+          color: $text-color;
+        }
+      }
+    }
+     // Menu Items
+    .MenuItems {
+      border: 2px solid $text-color;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: flex;
+      padding: 2em;
+      color: black;
+      height: fit-content;
+      padding-bottom: 3em;
+      border-radius: 5px;
+  
+      .category_header {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3em;
+        align-items:center;
+        h1, .withRice {
+          color: $text-color;
+          text-align:center;
+          margin-bottom: 0;
+          max-width: 11em;
+        }
+        .withRice::after {
+          content:"(Serve with Rice)";
+          display: block;
+          font-size: 16px;
+          margin: .5em 0;
+        }
+        .category_sub {
+          color: $text-color;
+          font-size: 16px;
+          text-align: center;
+        }
+      }
+      .category_size {
+        color: $text-color;
+        width: 100%;
+        text-align: end;
+        .pt, .qt {
+          margin: 1.3em;  
+        }
+      }
+      .item {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 1em;
+        position: relative;
+        overflow: hidden;
+        &__name {
+          flex: 1 1 auto;
+          padding-right: 10px;
+          margin: 0;
+          position: relative;
+          overflow: hidden;
+        }
+        &__name:after{
+          content: '';
+          position: absolute;
+          border-bottom: 2px dotted #ccc;
+          width: 10000px;
+          bottom: 7px;
+          margin-left: .25em;
+        }
+        &__description {
+          display: block;
+          font-size: initial;
+          margin: -20px 0 1em 3rem;
+          color: $text-color;
+        }
+        .fa-pepper-hot {
+          color: $text-color;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .chineseMenu {
+    .CategorySearch {
+      margin: 0 15px;
+    }
+    padding: 0;
+    .MenuItems {
+      .category_header {
+        margin-top: 1em;
+      }
+      border: none;
+      padding: 0 15px !important;
+    }
+    .MenuContents {
+      padding: 0 !important;
+    }
+    .MenuCategory {
+      padding: 0 15px !important;
+      .category {
+        display: none;
+      }
+      .MobileCategory {
+        display: block !important;
+        color: $text-color;
+        margin: 0 15px;
+        .rdn-control {
+          border: 2px solid $text-color !important;
+          border-radius: 5px !important;
+          background-color: transparent !important;
+          margin-bottom: 1em;
+          color: $text-color;
+          font-weight: 500;
+        }
+        .rdn-drop-menu-option, 
+        .rdn-drop-menu-group-option, 
+        .rdn-selection-menu-option, 
+        .rdn-selection-menu-group-option {
+          background-image: url('/images/Menu/menubg1.jpeg');
+          background-position: center center;
+          background-size: contain;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 568px) {
+  .chineseMenu {
+    padding: 0;
+    .MobileCategory {
+      .rdn-control {
+        font-size: 19px;
+      }
+    }
+    .MenuItems {
+      .category_header {
+        h1 {
+          font-size: 1.5em;
+        }
+      }
+      .item {
+        font-size: 15px;
+        &__description {
+          margin: 0;
+          margin-top: -20px;
+          padding-left: 2em;
+         }
+      }
+    }
+  }
+}
+@media screen and (max-width: 414px) {
+  .chineseMenu {
+    padding: 0;
+    .MobileCategory {
+      .rdn-control {
+        font-size: 16px;
+      }
+    }
+    .MenuItems {
+      .category_header {
+        h1 {
+          font-size: 1.5em;
+        }
+      }
+      .item {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
