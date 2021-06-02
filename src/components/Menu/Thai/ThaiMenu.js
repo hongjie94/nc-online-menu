@@ -2,7 +2,7 @@ import React from 'react'
 
 const ThaiMenu = () => {
     return (
-        <div>
+        <div className="thaiMenu">
             
         </div>
     )

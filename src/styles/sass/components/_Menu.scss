@@ -1,115 +1,3 @@
-/*
-Main Menu
-*/
-.MainMenu {
-  min-height: 80vh;
-  background-color: $text-color;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .menuOptions {
-    width: 100%;
-    min-height: 65vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 2em;
-    a {
-      text-decoration: none;
-      color:#fffe;
-    }  
-    .option_cn, .option_thai {
-      margin:2em;
-      width: 100%;
-      height:75vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: black;
-      background-size: cover;
-      border-radius: 10px;
-      max-width: 370px;
-      max-height: 500px;
-      h1 {
-        margin-bottom: 0;
-        padding: .5em;
-        background: rgba(0, 0, 0, 0.1);
-        width: 100%;
-        height: 100%;
-        font-family: $logo-font;
-        border-radius: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 3em;
-      }
-    }
-    .option_cn {
-      flex: 1;
-      background: linear-gradient(to right, rgba(0.0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
-      url('/images/Menu/Cnbg.png') no-repeat;
-      background-color: #EFE4CA;
-      background-repeat: no-repeat;
-      background-size: cover; 
-      &:hover {
-        h1{
-          background: rgba(0, 0, 0, 0.1);
-        }
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
-        url('/images/Menu/optionCn.jpeg') no-repeat center center; 
-        background-size: cover;  
-      }
-    }
-    .option_thai {
-      flex: 1;
-      background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
-      url('/images/Menu/thaibg.png') no-repeat;
-      background-color: #263238;
-      background-repeat: no-repeat;
-      background-size: cover; 
-      &:hover {
-        h1{
-          background: rgba(0, 0, 0, 0.0);
-        }
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
-        url('/images/Menu/optionThai.jpeg') no-repeat center center;
-        background-size: cover; 
-      }
-    }
-  }  
-}
-
-@media screen and (max-width: 920px) {
-  .MainMenu {
-    .menuOptions {
-      flex-direction: column;
-      align-items: center; 
-    }
-  }
-}
-@media screen and (max-width: 382px) {
-  .MainMenu {
-    .menuOptions {
-      .option_cn, .option_thai {
-        h1 {
-          font-size: 2em;
-        }
-      }
-    }
-  }
-}
-@media screen and (max-width: 280px) {
-  .MainMenu {
-    .menuOptions {
-      .option_cn, .option_thai {
-        h1 {
-          font-size: 1.5em;
-        }
-      }
-    }
-  }
-}
-
 
 /*
 Chinese Menu
@@ -340,3 +228,17 @@ Chinese Menu
   }
 }
 
+
+
+/*
+Thai Menu
+*/
+
+.thaiMenu {
+  // background:
+  //           url('/images/Menu/thaibg.png')  no-repeat center center;
+  background-color: #263238;
+  color: $text-color;
+  padding: 2em;
+  min-height: 80vh;
+}

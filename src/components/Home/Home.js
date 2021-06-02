@@ -3,7 +3,9 @@ import About from './sections/About';
 import Quote from './sections/Quote';
 import Specils from './sections/Specils';
 import GoogleMap from './sections/GoogleMap';
+import animation from '../../components/Animations.js';
 const Home = () => {
+  animation();
     return (
       <div>
         <Hero />
@@ -14,5 +16,4 @@ const Home = () => {
       </div>
     )
 }
-
 export default Home;

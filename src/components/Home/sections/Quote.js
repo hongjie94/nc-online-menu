@@ -1,5 +1,4 @@
 
-
 const Quote = () => {
     return (
         <section className="Quote">
@@ -12,9 +11,8 @@ const Quote = () => {
           <h3 className="Quote__author">
             Alvin Leung
           </h3>
-           
         </section>
     )
 }
 
-export default Quote
+export default Quote;

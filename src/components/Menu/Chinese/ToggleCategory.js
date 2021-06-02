@@ -22,11 +22,7 @@ const ToggleCategory = (target, SearchInput) => {
           result.name.toLowerCase().includes(SearchInput.toLowerCase())
         ));
       };
-      
-      // console.log('SearchInput ', SearchInput  )
-      // console.log('SearchResults ', SearchResults  )
-      // console.log('CategoryItems ', CategoryItems  )
-   
+     
       // Hide size for following categories
       switch (target) {
         case "Appetizers":

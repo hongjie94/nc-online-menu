@@ -11,12 +11,12 @@ body {
   font-family: $main-font;
   font-size: 1.2rem;
   line-height: 1.6;
-  background: $bg-color;
+  background: $nav-bg-color;
   color: $text-color;
 }
 
 .app {
-  background: $bg-color;
+  background: $nav-bg-color;
   overflow: hidden;
 }
 

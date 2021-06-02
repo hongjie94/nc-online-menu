@@ -4,6 +4,7 @@ Navbar
 .navbar { 
   background-color: $nav-bg-color !important;
   box-shadow: 0 4px 4px rgba(0,0,0,.1);
+  padding: 0 !important;
   // Logo
   .navbar-brand {
     margin: auto 1em;
@@ -39,8 +40,46 @@ Navbar
     width: 100%;
     display: flex;
     justify-content: center;
+    text-align: center;
     .active {
       color: #ffff;
+    }
+    .dropdown-menu {
+      background: $footer-bg-color;
+      .active {
+        color: #ffff;
+      }
+      a {
+        color: $text-color;
+        &:hover {
+          color: #ffff;
+        }
+      }
+    .dropdown-item {
+      &:hover {
+        background: $footer-bg-color;
+      }
+    }  
+      
+    }
+    #Dropdown {
+      color: $text-color;
+      background-color: none;
+      background: transparent;
+      border: none;
+      font-family: $logo-font;
+      font-weight: 600;
+      font-size: 1.5em;
+      transition: all .5s;
+      margin: 1em auto;
+      &:focus {
+        border: none;
+        box-shadow: none;
+        background-color: none;
+      }
+      &:hover {
+        color: #ffff;
+      }
     }
     // Links
     a {
@@ -52,6 +91,12 @@ Navbar
       color: $text-color;
       font-size: 1.5em;
       transition: all .5s;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      .active {
+        color: #ffff;
+      }
       &:hover {
         color: #ffff;
       }
@@ -72,7 +117,7 @@ Reponsive design
 @media (max-width: 991px) {
   .navbar {
     align-items: flex-start;
-    padding: 0;
+    padding: 0 !important;
     .navbar-brand {
       margin-top: 0;
     }
