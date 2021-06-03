@@ -1,7 +1,7 @@
 import animation from '../../Animations';
 
 const About = () => {
-  animation();
+  animation("About");
   return (
     <section id="About" className="About">
       <h1 className="aboutText">About</h1>
@@ -13,8 +13,8 @@ const About = () => {
       menus. As of COVID-19 Restaurant Move To a Takeout-Only Model. 
       </p>
       <div className="aboutButtons">
-        <a href="/ChineseMenu" class="menuOptions">Chinese Menu</a>
-        <a href="/ThaiMenu" class="menuOptions">Thai Menu</a>
+        <a href="/ChineseMenu" className="menuOptions">Chinese Menu</a>
+        <a href="/ThaiMenu" className="menuOptions">Thai Menu</a>
       </div>
     
   </section>

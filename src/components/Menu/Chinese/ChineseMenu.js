@@ -6,7 +6,7 @@ import logo from '../../../images/Menu/mark.png';
 
 
 const ChineseMenu = () => {
-  animation();
+  animation("ChineseMenu");
   // Set default category as Appetizers
   const [Category, setCategory] = useState('Appetizers');
 
@@ -22,6 +22,7 @@ const ChineseMenu = () => {
            
             <div className="hederText">
               <h1> CHINESE MENU </h1>
+               <span className="lunchTime">(Lunch Everday From 11AM-3PM)</span>
                <span> <b>Tel :</b>  <a href="tel:518-673-8292">  518 673 8292</a></span>
                <span> <b>Tel :</b><a href="tel:518-673-2380">  518 673 2380</a></span>
             </div>

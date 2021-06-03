@@ -5,7 +5,7 @@ import Specils from './sections/Specils';
 import GoogleMap from './sections/GoogleMap';
 import animation from '../../components/Animations.js';
 const Home = () => {
-  animation();
+  animation("Home");
     return (
       <div>
         <Hero />

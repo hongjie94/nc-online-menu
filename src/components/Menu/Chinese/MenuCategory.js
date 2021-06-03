@@ -42,7 +42,7 @@ const MenuItems = ({setCategory, setSearchInput}) => {
             onChange={function getValue(e){
               setCategory(e.value);
             }}
-            placeholder="Menu Categories"
+            placeholder="Appetizers"
             options={
               CategoryNames
             }
@@ -53,11 +53,8 @@ const MenuItems = ({setCategory, setSearchInput}) => {
           <div className="category" key={index}>
             
             <ul className="categoryList">
-              <li><a 
-               activeStyle={{
-                fontWeight: "bold",
-                color: "blue"
-              }}
+              <li>
+                <a 
                 name={allCategoryName}
                 href={`#${allCategoryName}`}
                 onClick={e => {

@@ -154,3 +154,14 @@ Reponsive design
     }
   }
 }
+
+@media screen and (max-height:540px) {
+  .navbar {
+    .navbar-nav {
+      .nav-link, #Dropdown {
+        margin: 0;
+      }
+    }
+  }   
+ 
+}

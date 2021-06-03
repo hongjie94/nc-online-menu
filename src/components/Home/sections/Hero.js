@@ -20,7 +20,7 @@ const Hero = () => {
             
                 <div className="HeroText__button">
                   <Link to="/ChineseMenu">
-                    <p><span class="bg"></span><span class="base"></span><span class="text">View Menu</span></p>
+                    <p><span className="bg"></span><span className="base"></span><span className="text">View Menu</span></p>
                   </Link>
                 </div> 
               

@@ -7,12 +7,6 @@ const MenuItems = ({Category, SearchInput}) => {
   const { CategoryItems, HideSize, WithRice, SearchResults } = ToggleCategory(Category, SearchInput);
   animation(Category);
 
-  // const tes = () => {
-  //   console.log(SearchInput)
-  //   console.log( Category)
-  //   console.log( 'SearchResults', SearchResults)
-  // }
-
     return (
       <>
         { CategoryItems && 
@@ -69,7 +63,7 @@ const MenuItems = ({Category, SearchInput}) => {
                 <span>{Item.item_num}</span>.
                   </div>
                   <div className="item__name">
-                    {Item.name} {Item.spicy && <i class="fas fa-pepper-hot"></i>}
+                    {Item.name} {Item.spicy && <i className="fas fa-pepper-hot"></i>}
                   </div>
                   <div className="item__price">
                     { Item.price && <span className="ml-1" >${Item.price}</span>}
@@ -89,7 +83,7 @@ const MenuItems = ({Category, SearchInput}) => {
               <div key={index}>
                 <div className="item">
                   <div className="item__name">
-                    <span>{Item.item_num}</span>. {Item.name} {Item.spicy && <i class="fas fa-pepper-hot"></i>}
+                    <span>{Item.item_num}</span>. {Item.name} {Item.spicy && <i className="fas fa-pepper-hot"></i>}
                   </div>
                   <div className="item__price">
                     { Item.price && <span className="ml-1" >${Item.price}</span>}

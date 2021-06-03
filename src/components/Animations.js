@@ -4,9 +4,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 
-const Animation = (Category) => {
+const Animation = (name) => {
   // Home page
   const [ HomeAnimation, setHomeAnimation ] = useState(null);
+
+  // About page
+  const [ AboutAnimation, setAboutAnimation ] = useState(null);
 
   // Contact page
   const [ ContactAnimation, setContactAnimation ] = useState(null);
@@ -20,8 +23,8 @@ const Animation = (Category) => {
     /*
     Animation for Home Page
     */ 
+   if( name ==="Home") {
     setHomeAnimation( 
-
       // Animation for Hero section
       gsap.fromTo(".Hero", { css: { visibility: 'invisible', opacity: 0}},
       {duration: 0, css: { visibility: 'visible', opacity: 1}}),
@@ -71,7 +74,7 @@ const Animation = (Category) => {
               toggleActions: "restart none none reset",
               start: "top 80%"
             }
-          })
+          });
         },
         "(max-width: 990px)" : () => {
           // Items sliding left
@@ -129,13 +132,40 @@ const Animation = (Category) => {
             toggleActions: "restart none none reset", 
             start: "top 80%",
           }
-        }),
+        })
     );
+  }
+    
+
+    /*
+    Animation for Contact Page
+    */ 
+   if(name ==="About") {
+    setAboutAnimation(
+      gsap.fromTo(".aboutText", {opacity: 0, scale: 0.01},
+        {duration: 1.5,  opacity: 1 , scale: 1, 
+          scrollTrigger: {
+            trigger: '.aboutText', 
+            toggleActions: "restart none none reset",  
+            start: "top 80%",
+          }
+        }),
+      gsap.fromTo(".aboutButtons", {opacity: 0, scale: 0.01, y: 200},
+        {duration: 1.5,  opacity: 1 , scale: 1, y: 0,
+          scrollTrigger: {
+            trigger: '.aboutButtons', 
+            toggleActions: "restart none none reset",  
+            start: "top 150%",
+          }
+        })
+    );
+   }
 
 
     /*
     Animation for Contact Page
     */ 
+   if(name ==="Contact") {
     setContactAnimation(
       gsap.fromTo(".Contactbg", { scale: 0.01, opacity: 0},
       {duration: 1, opacity: 1, scale: 1}),
@@ -143,19 +173,20 @@ const Animation = (Category) => {
       gsap.fromTo(".contactInfo", { y: "100%", opacity: 0},
         {duration: 1, opacity: 1, y: 0}),
     );
+   }
 
 
     /*
     Animation for Menu Page
     */ 
+   if(name ==="ChineseMenu") {
     setChineseMenuAnimation(
       gsap.fromTo(".MenuContents", { scale: 0.05, opacity: 0},
       {duration: 1, opacity: 1, scale: 1})
     );
-    
-
-    }, []);
-    return { HomeAnimation, ContactAnimation, ChineseMenuAnimation } 
+   }
+  }, [name]);
+    return { HomeAnimation, AboutAnimation, ContactAnimation, ChineseMenuAnimation } 
 }
 
 export default Animation;
