@@ -1,5 +1,5 @@
-import animation from '../../Animations'
-import { NavLink } from 'react-router-dom';
+import animation from '../../Animations';
+
 const About = () => {
   animation();
   return (
@@ -13,8 +13,8 @@ const About = () => {
       menus. As of COVID-19 Restaurant Move To a Takeout-Only Model. 
       </p>
       <div className="aboutButtons">
-        <NavLink to="/ChineseMenu" class="menuOptions">Chinese Menu</NavLink>
-        <NavLink to="/ThaiMenu" class="menuOptions">Thai Menu</NavLink>
+        <a href="/ChineseMenu" class="menuOptions">Chinese Menu</a>
+        <a href="/ThaiMenu" class="menuOptions">Thai Menu</a>
       </div>
     
   </section>

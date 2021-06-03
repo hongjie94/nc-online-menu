@@ -13,15 +13,26 @@ const Hero = () => {
                 <div className="phoneNum">
                   <a href="tel:518-673-8292"> Call us at: (518)-673-8292</a> 
                 </div>
-                  <div className="hours">
-                      Mon-Sat: 11:00 AM - 10:00 PM <br/> 
-                      <span> Sunday: 12:00 Noon- 09:30 PM</span>
-                  </div> 
-              <Link className="btn" to="/menu"> 
+                <div className="hours">
+                    Mon-Sat: 11:00 AM - 10:00 PM <br/> 
+                    <span> Sunday: 12:00 Noon- 09:30 PM</span>
+                </div>
+            
+                <div className="HeroText__button">
+                  <Link to="/ChineseMenu">
+                    <p><span class="bg"></span><span class="base"></span><span class="text">View Menu</span></p>
+                  </Link>
+                </div> 
+              
+            
+              {/* <Link className="btn" to="/menu"> 
                 <div className="HeroText__button">
                   View Menu
                 </div>
-              </Link>  
+              </Link>   */}
+
+           
+
             </div> 
             <div className="fishImage2" />
          </div> 

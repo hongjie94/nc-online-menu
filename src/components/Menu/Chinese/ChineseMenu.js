@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import MenuItems from './MenuItems';
 import MenuCategory from './MenuCategory';
+import animation from '../../Animations';
 import logo from '../../../images/Menu/mark.png';
 
 
 const ChineseMenu = () => {
-
+  animation();
   // Set default category as Appetizers
   const [Category, setCategory] = useState('Appetizers');
 
@@ -14,17 +15,15 @@ const ChineseMenu = () => {
     return (
       <div className="chineseMenu">
         <div className="container MenuContents">
-          <div>
-            <img  id={Category} src={logo} alt="search-mark"/>
-            <div>
-            Our Chinese menu 
-            <h1>Explore the menu</h1>
-                
+          <div className="chineseMenu_header">
+            <div className="header_mark">
+               <img src={logo} alt="search-mark"/>
             </div>
-            <div className="menu_phone mb-3">
-              <i className="fas fa-phone-alt"></i> Tel1: <a href="tel:518-673-8292"> (518)-673-8292 </a> 
-              <br/>   
-              <i className="fas fa-phone-alt"></i>Tel2: <a href="tel:518-673-2380"> (518)-673-2380</a> 
+           
+            <div className="hederText">
+              <h1> CHINESE MENU </h1>
+               <span> <b>Tel :</b>  <a href="tel:518-673-8292">  518 673 8292</a></span>
+               <span> <b>Tel :</b><a href="tel:518-673-2380">  518 673 2380</a></span>
             </div>
           </div>
 
@@ -34,6 +33,7 @@ const ChineseMenu = () => {
               setSearchInput= {setSearchInput}
             />
             <MenuItems 
+              id="MenuItems"
               Category={Category}
               SearchInput = {SearchInput}
             />

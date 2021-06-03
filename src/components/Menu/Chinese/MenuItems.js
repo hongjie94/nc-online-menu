@@ -1,11 +1,11 @@
 import ToggleCategory from './ToggleCategory'
-
+import animation from '../../Animations'
 
 const MenuItems = ({Category, SearchInput}) => {
 
   
   const { CategoryItems, HideSize, WithRice, SearchResults } = ToggleCategory(Category, SearchInput);
-
+  animation(Category);
 
   // const tes = () => {
   //   console.log(SearchInput)
@@ -33,7 +33,7 @@ const MenuItems = ({Category, SearchInput}) => {
           }
           
           { SearchInput === '' && 
-            <div className="category_header"> 
+            <div id={Category}  className="category_header"> 
               <img src="" alt=""/>
               {!WithRice && <h1>{Category}</h1> }         
               {WithRice && <h1 className="withRice">{Category}</h1> }
@@ -63,7 +63,7 @@ const MenuItems = ({Category, SearchInput}) => {
          { SearchInput === '' && 
           <>
             {CategoryItems.map((Item, index) => (
-              <div key={index}>
+              <div  className="allItems" key={index}>
                 <div className="item">
                 <div className="item__num">
                 <span>{Item.item_num}</span>.

@@ -13,15 +13,47 @@ Chinese Menu
     filter: contrast(.6);
   }
   .MenuContents {
-    // background-image: url('/components/Home/sections/imgs/menubg.jpeg');
-    // background-position: center center;
-    // background-size: contain;
-    color: $text-color;
+    .chineseMenu_header {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 3em;
+      padding: 2em auto;
+      background-color: transparent;
+      background: linear-gradient(to right, rgba(224, 210, 210, 0.2), rgba(0, 0, 0, 0.0)),
+      url('/images/Menu/cnHeader.png') no-repeat center center;
+      background-size: cover;
+      min-height: 15em;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: flex-start;
+      img {
+        padding: 1em;
+      }
+      h1 {
+        font-family: $logo-font;
+        font-size: 3em;
+        padding: 0 .5em;
+      }
+      span {
+        font-size: 1.2em;
+        padding-left: 1.5em;
+        display: block;
+        text-align: start;
+        a {
+          text-decoration: none;
+          color: $text-color;
+          &:hover {
+            color:  black;
+          }
+        }
+      }
+    }
     //Menu Search Field
     .CategorySearch {
       border: none !important;
       padding: 0;
-      min-width: 15em;
+      min-width: 19em;
     }
     .react-search-field-input {
       font-size: 1em!important;
@@ -60,17 +92,21 @@ Chinese Menu
     }
      // Menu Items
     .MenuItems {
-      border: 2px solid $text-color;
       display: flex;
       justify-content: flex-start;
       flex-direction: column;
       align-items: flex;
       padding: 2em;
+      padding-top: 0;
       color: black;
       height: fit-content;
-      padding-bottom: 3em;
       border-radius: 5px;
-  
+      margin-bottom: 5em !important;
+      .searchResult {
+        margin-top: 5em;;
+        color: $text-color;
+        text-align: center;
+      }
       .category_header {
         display: flex;
         flex-direction: column;
@@ -80,7 +116,7 @@ Chinese Menu
           color: $text-color;
           text-align:center;
           margin-bottom: 0;
-          max-width: 11em;
+          max-width: 10.5em;
         }
         .withRice::after {
           content:"(Serve with Rice)";
@@ -127,7 +163,7 @@ Chinese Menu
         &__description {
           display: block;
           font-size: initial;
-          margin: -20px 0 1em 3rem;
+          margin: -15px 2.5rem 10px;
           color: $text-color;
         }
         .fa-pepper-hot {
@@ -136,6 +172,15 @@ Chinese Menu
       }
     }
   }
+}
+@media screen and (max-width: 1199px) {
+  .chineseMenu {
+    .MenuContents {
+      .CategorySearch {
+        min-width: 15em;
+      }
+    }
+  }    
 }
 @media screen and (max-width: 991px) {
   .chineseMenu {
@@ -198,11 +243,6 @@ Chinese Menu
       }
       .item {
         font-size: 15px;
-        &__description {
-          margin: 0;
-          margin-top: -20px;
-          padding-left: 2em;
-         }
       }
     }
   }

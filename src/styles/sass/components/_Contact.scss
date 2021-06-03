@@ -1,5 +1,4 @@
 .Contact {
-  
   background-color: #F8F2ED;
   color: $text-color;
   padding: 2em;
@@ -18,15 +17,115 @@
       margin-bottom: 0em;
     }
   }
+  .contactInfo {
+    margin: 5rem auto !important;
+    i {
+      font-size: 1.5em;
+      display: block;
+      margin-bottom: .5em;
+    }
+    span {
+      display: block;
+      font-size: 1.2rem;
+      a {
+        color: $text-color;
+        &:hover {
+          text-decoration: none;
+          color: #000000; 
+        }
+      }
+    }
+    .dayActive{
+      color: #000000;
+      font-weight: bold;
+    }
+    .info  {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .contactPhone {
+      margin-top: 2rem !important;
+    }
+    .hours {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+  }
 }
+
+// Submit button
+.formSubmitBtn {
+  background: transparent;
+  transform: translate(0, 20%);
+  color: $text-color;
+  text-decoration: none;
+  font-size: 1em;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 0.5em 3em;
+  border: 2px solid  $text-color;
+  transition: 0.02s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: $text-color;
+    transition: 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1), 
+    left 0.3s cubic-bezier(0.1, 0, 0.1, 1);
+    z-index: -1;
+  }
+  &::after {
+    content: "";
+    display: inline-block;
+    background-image: url("https://image.flaticon.com/icons/png/128/109/109617.png");
+    position: absolute;
+    top: 0;
+    left: calc(100% - 3em);
+    right: 3em;
+    bottom: 0;
+    background-size: 1.5em;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: right 0.3s cubic-bezier(0.1, 0, 0.1, 1);
+  }
+  &:hover {
+    padding: 0.5em 4em 0.5em 2em;
+    &::before {
+      left: calc(100% - 3em);
+      right: 0;
+      transition: 0.3s cubic-bezier(0.1, 0, 0.1, 1), 
+      left 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+    }
+    &::after {
+      right: 0;
+      transition: right 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+    }
+  } 
+}
+
 
 @media (max-width:800px) {
   .Contact {
     .Contactbg {
-    
       background-size: contain;
       min-height: 10em;
       align-items: flex-end;
+    }
+  }
+}
+@media (max-width:767px) {
+  .Contact {
+    text-align: center;
+    .contactInfo {
+      .hours {
+        margin-top: 2rem !important;
+      }
     }
   }
 }
