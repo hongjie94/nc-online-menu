@@ -16,7 +16,6 @@ const About = () => {
         <a href="/ChineseMenu" className="menuOptions">Chinese Menu</a>
         <a href="/ThaiMenu" className="menuOptions">Thai Menu</a>
       </div>
-    
   </section>
   )
 };

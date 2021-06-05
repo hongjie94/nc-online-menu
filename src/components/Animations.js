@@ -11,12 +11,12 @@ const Animation = (name) => {
   // About page
   const [ AboutAnimation, setAboutAnimation ] = useState(null);
 
-  // Contact page
-  const [ ContactAnimation, setContactAnimation ] = useState(null);
-
   // Menu page
   const [ ChineseMenuAnimation, setChineseMenuAnimation ] = useState(null);
-  // const [ ThaiMenutAnimation, setThaiAnimation ] = useState(null);
+  const [ ThaiMenuAnimation, setThaiMenuAnimation ] = useState(null);
+
+  // Contact page
+  const [ ContactAnimation, setContactAnimation ] = useState(null);
        
   useEffect(() => {
     
@@ -163,6 +163,24 @@ const Animation = (name) => {
 
 
     /*
+    Animation for Menu Page
+    */ 
+   if(name ==="ChineseMenu") {
+    setChineseMenuAnimation(
+      gsap.fromTo(".MenuContents", { scale: 0.05, opacity: 0},
+      {duration: 1, opacity: 1, scale: 1})
+    );
+   }
+
+   if(name ==="ThaiMenu") {
+    setChineseMenuAnimation(
+      gsap.fromTo(".thaiMenu__content", { scale: 0.05, opacity: 0},
+      {duration: 1, opacity: 1, scale: 1})
+    );
+   }
+
+
+    /*
     Animation for Contact Page
     */ 
    if(name ==="Contact") {
@@ -175,18 +193,8 @@ const Animation = (name) => {
     );
    }
 
-
-    /*
-    Animation for Menu Page
-    */ 
-   if(name ==="ChineseMenu") {
-    setChineseMenuAnimation(
-      gsap.fromTo(".MenuContents", { scale: 0.05, opacity: 0},
-      {duration: 1, opacity: 1, scale: 1})
-    );
-   }
   }, [name]);
-    return { HomeAnimation, AboutAnimation, ContactAnimation, ChineseMenuAnimation } 
+    return { HomeAnimation, AboutAnimation, ChineseMenuAnimation, ThaiMenuAnimation, ContactAnimation } 
 }
 
 export default Animation;

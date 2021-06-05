@@ -1,10 +1,16 @@
 import { Link } from 'react-router-dom';
+import fishImage from '../../../images/Home/fish.png'
 const Hero = () => {
+
     return (
         <section className="Hero">
-          <div className="Hero__content">
-            <div className="fishImage" />
-            <div className="HeroText"> 
+          <div className="Hero__content container">
+            <div className="row">
+            <div className="fishImage col-md-2 col-lg-3"> 
+              <img src={fishImage} alt="fishIage"/>
+            </div>
+
+            <div className="HeroText col-12 col-md-8 col-lg-6"> 
               <h1>New China</h1>
                 <h4>
                   We Serve Chinese and Thai Food  <br/>
@@ -17,24 +23,24 @@ const Hero = () => {
                     Mon-Sat: 11:00 AM - 10:00 PM <br/> 
                     <span> Sunday: 12:00 Noon- 09:30 PM</span>
                 </div>
-            
+              <div className="HeroText__buttons">
                 <div className="HeroText__button">
                   <Link to="/ChineseMenu">
-                    <p><span className="bg"></span><span className="base"></span><span className="text">View Menu</span></p>
+                    <p><span className="bg"></span><span className="base"></span><span className="text">Chinese Menu</span></p>
+                  </Link>
+                </div>  
+                <div className="HeroText__button">
+                  <Link to="/ThaiMenu">
+                    <p><span className="bg"></span><span className="base"></span><span className="text">Thai Menu</span></p>
                   </Link>
                 </div> 
-              
-            
-              {/* <Link className="btn" to="/menu"> 
-                <div className="HeroText__button">
-                  View Menu
-                </div>
-              </Link>   */}
-
-           
-
+              </div>
             </div> 
-            <div className="fishImage2" />
+
+            <div className="fishImage2 col-md-2 col-lg-3">
+              <img src={fishImage} alt="fishIage"/>  
+            </div>
+            </div>
          </div> 
         </section>
     )

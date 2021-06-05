@@ -3,7 +3,7 @@
 Chinese Menu
 */
 .chineseMenu {
-  background-image: url('/images/Menu/menubg1.jpeg');
+  background-image: url('/images/Menu/CNmenubg.jpeg');
   background-position: center center;
   background-size: contain;
   color: $text-color;
@@ -183,7 +183,8 @@ Chinese Menu
   .chineseMenu {
     .MenuContents {
       .CategorySearch {
-        min-width: 15em;
+        width: 15em;
+        min-width: 15em !important;
       }
     }
   }    
@@ -225,7 +226,7 @@ Chinese Menu
         .rdn-drop-menu-group-option, 
         .rdn-selection-menu-option, 
         .rdn-selection-menu-group-option {
-          background-image: url('/images/Menu/menubg1.jpeg');
+          background-image: url('/images/Menu/CNmenubg.jpeg');
           background-position: center center;
           background-size: contain;
         }
@@ -281,10 +282,129 @@ Thai Menu
 */
 
 .thaiMenu {
-  // background:
-  //           url('/images/Menu/thaibg.png')  no-repeat center center;
+  padding: 2em 0;
   background-color: #263238;
-  color: $text-color;
-  padding: 2em;
+  color: #ffffff;
   min-height: 80vh;
+  &__headerImg {
+    width: 100%;
+    text-align: center;
+    filter: contrast(.01);
+    padding: 0 2em;
+    img {
+      width: 80%;
+    }
+  }
+  .headerText {
+    padding: 1em;
+    background:linear-gradient(to right, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, .01));
+    h1 {
+      text-align: initial;
+      width: 100%;
+      color: $text-color !important;
+      font-family: $logo-font;
+      font-size: 3em;
+      padding: 0 1em;
+    }
+  }
+  &__content {
+    margin-bottom: 0 !important;
+    span {
+      font-size: 1.2em;
+      display: block;
+      color: $text-color;
+      a {
+        text-decoration: none;
+        color: $text-color;
+        &:hover {
+          color:  black;
+        }
+      }
+    }
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3em;
+    padding: 2em auto;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    .row {
+      width: 100%;
+      padding: 2em  .5em ;
+      margin:0 !important;
+      .ThaiCategory {
+        color: $text-color;
+        width: 100%;
+        text-align:center;
+        margin-bottom: 2rem;
+      }
+      .thaiItems{
+        &__header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          margin-bottom: 0;
+          .thaiItemsHeader_left{
+            text-align: initial;
+           p {
+             display: inline;
+           }
+          }
+          i {
+            color: $text-color;
+            font-size: 1.2rem;
+            padding: 10px .5em;
+          }
+          .thaiItemsName, span {
+            font-size: 1.2rem;
+            display: initial;
+            text-align: initial;
+            color: #ffffff;
+          }
+          span {
+            text-align: initial;
+            font-size: 1.2rem;
+          }
+        }
+        &__options {
+          text-align: initial;
+          margin-bottom: .5em;
+          span {
+            color: $text-color;
+          }
+        }
+        &__descriptions {
+          font-size: .8rem;
+          font-weight: 200;
+          font-style: italic;
+          margin-top: .5rem;
+          margin-bottom: 1em;
+          padding-bottom: 2em;
+          text-align: initial;
+          border-bottom: .5px solid #cccccc;
+          span {
+            color: #cccccc;
+          }
+        }
+      }
+    }
+    li, ul {
+      list-style: none;
+      padding: 1rem 0;
+      text-align: start;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .thaiMenu {
+    &__headerImg {
+      img {
+        width: 100%;
+      }
+    }
+  }
 }

@@ -2,10 +2,10 @@ import { useState } from 'react'
 import MenuItems from './MenuItems';
 import MenuCategory from './MenuCategory';
 import animation from '../../Animations';
-import logo from '../../../images/Menu/mark.png';
-
+import mark from '../../../images/Menu/mark.png';
 
 const ChineseMenu = () => {
+
   animation("ChineseMenu");
   // Set default category as Appetizers
   const [Category, setCategory] = useState('Appetizers');
@@ -17,7 +17,7 @@ const ChineseMenu = () => {
         <div className="container MenuContents">
           <div className="chineseMenu_header">
             <div className="header_mark">
-               <img src={logo} alt="search-mark"/>
+               <img src={mark} alt="search-mark"/>
             </div>
            
             <div className="hederText">

@@ -1,15 +1,15 @@
 [
     {
-      "category": "Soup",
+      "category": "Soups",
       "options":"(Chicken, shrimp or vegetable)",
       "name": "Tom Yum Koong",
-      "description": "Famous Thai Spicy soup with mushroom & Thai herbs.",
+      "description": "Famous Thai Spicy Soup with mushroom & Thai herbs.",
       "item_num": null,
       "price": "3.50",
       "spicy": true
     },
     {
-      "category": "Soup",
+      "category": "Soups",
       "options":"(Chicken, shrimp or vegetable)",
       "name": "Tom Kha",
       "description": "Coconut milk, mushroom & lime juice.",
@@ -18,7 +18,7 @@
       "spicy": true
     },
     {
-      "category": "Soup",
+      "category": "Soups",
       "options":null,
       "name": "Seaweed Tofu Soup",
       "description": "Seaweed, tofu, egg white & tomato",
@@ -27,7 +27,7 @@
       "spicy": false
     },
     {
-      "category": "Salad",
+      "category": "Salads",
       "options":null,
       "name": "Thai Green Salad",
       "description": "Cucumber, lettuce, tomatoes, bean sprout, & dried bean curd with peanut dressing",
@@ -36,7 +36,7 @@
       "spicy": false
     },
     {
-      "category": "Salad",
+      "category": "Salads",
       "options":"(Grill chicken, beef or shrimp)",
       "name": "Yum",
       "description": "Onions, tomato, lettuce, & Thai herbs marinated in spicy lime juicy sauce",
@@ -173,7 +173,7 @@
         "spicy": false
     },
     {
-        "category": "Chef Specil",
+        "category": "Chef Specils",
         "options":null,
         "name": "Thai's Beef Diced with Vietnamese & French Style",
         "description": "Freshly cut steak dices caramelized with spicy herby Thai's spices mixed with vegetables in garlic and black pepper sauce.",
@@ -182,7 +182,7 @@
         "spicy": true
     },
     {
-        "category": "Chef Specil",
+        "category": "Chef Specils",
         "options":null,
         "name": "Thai Mango Chicken",
         "description": "Delicious spicy mango sauce with red onion, tomato, and scallion.",
@@ -191,7 +191,7 @@
         "spicy": false
     },
     {
-        "category": "Chef Specil",
+        "category": "Chef Specils",
         "options":null,
         "name": "Coconut Shrimp",
         "description": "Stir-fried with pineapple, mushroom, bell peppers, & water chestnuts in a sweet coconut sauce.",
