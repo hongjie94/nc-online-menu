@@ -3,8 +3,6 @@ import { FaFacebook } from "react-icons/fa";
 const Footer = () => {
     return (
       <>
-      {/* <span class="material-icons">facebook</span>
-      <span class="material-icons">email</span>mail: newchinapalatine@gmail.com */}
       <footer id="Footer" className="footer">
         <div className="container">
           <div className="row">

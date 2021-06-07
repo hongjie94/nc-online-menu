@@ -61,6 +61,8 @@ const ThaiMenu = () => {
               <div className="col-lg-4 col-12">
                   <div className="row">
                   <h1 className="ThaiCategory"> Noodles & Rice</h1>
+                   <span className="category_sub">Choice of Chicken, Beef or Shrimp $10</span> 
+                   <span className="category_sub">Tofu & Vegetables $9</span> 
                     <div className="col-12">
                     <GetMenuItems 
                       Category={'Noodles & Rice'}
@@ -69,6 +71,8 @@ const ThaiMenu = () => {
                   </div>
                   <div className="row">
                   <h1 className="ThaiCategory"> Thai Curry</h1>
+                  <span className="category_sub">Choice of Chicken, Beef or Shrimp $11</span> 
+                   <span className="category_sub">Tofu & Vegetables $10</span> 
                     <div className="col-12">
                     <GetMenuItems 
                       Category={'Thai Curry'}
@@ -80,6 +84,8 @@ const ThaiMenu = () => {
               <div className="col-lg-4 col-12">
                 <div className="row"> 
                   <h1 className="ThaiCategory"> Thai Cuisine</h1>
+                  <span className="category_sub">Choice of Chicken, Beef or Shrimp $11</span> 
+                  <span className="category_sub">(Choose From M1-M4)</span> 
                   <div className="col-12">
                   <GetMenuItems 
                       Category={'Thai Cuisine'}

@@ -153,7 +153,7 @@ const Animation = (name) => {
       gsap.fromTo(".aboutButtons", {opacity: 0, scale: 0.01, y: 200},
         {duration: 1.5,  opacity: 1 , scale: 1, y: 0,
           scrollTrigger: {
-            trigger: '.aboutButtons', 
+            trigger: '.aboutButton', 
             toggleActions: "restart none none reset",  
             start: "top 150%",
           }
@@ -173,7 +173,7 @@ const Animation = (name) => {
    }
 
    if(name ==="ThaiMenu") {
-    setChineseMenuAnimation(
+    setThaiMenuAnimation(
       gsap.fromTo(".thaiMenu__content", { scale: 0.05, opacity: 0},
       {duration: 1, opacity: 1, scale: 1})
     );

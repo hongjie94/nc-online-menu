@@ -5,6 +5,7 @@ Navbar
   background-color: $nav-bg-color !important;
   box-shadow: 0 4px 4px rgba(0,0,0,.1);
   padding: 0 !important;
+  height: 12vh;
   // Logo
   .navbar-brand {
     margin: auto 1em;
@@ -116,14 +117,11 @@ Reponsive design
 */ 
 @media (max-width: 991px) {
   .navbar {
+    height: auto;
     align-items: flex-start;
     padding: 0 !important;
     .navbar-brand {
       margin-top: 0;
-    }
-    h1 {
-      font-size: 3rem !important;
-      letter-spacing: 5px !important;
     }
     .navbar-nav {
       justify-content: flex-start;
@@ -160,8 +158,20 @@ Reponsive design
     .navbar-nav {
       .nav-link, #Dropdown {
         margin: 0;
+        padding: initial;
       }
     }
   }   
  
+}
+
+@media screen and (max-height:540px) {
+  .navbar {
+    .navbar-nav {
+      .nav-link, #Dropdown {
+        margin: 0;
+        padding: initial;
+      }
+    }
+  }   
 }

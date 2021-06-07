@@ -21,15 +21,15 @@ const Navbar = () => {
 
   ShowNav ? showNav() : hideNav();
 
-
   return (
     <nav className='navbar navbar-expand-lg'>
       <Link className="navbar-brand" to="/">
           <img src={logo} alt="logo icon"/>
           <h1>China</h1>
       </Link>
+
       <FaBars id="Fabar" onClick={() => setShowNav(!ShowNav)}/>
-   
+      
       <div 
         className={ShowNav ? "navbar-nav navbar-nav-active" : "navbar-nav"
       }> 

@@ -13,6 +13,7 @@ Chinese Menu
     filter: contrast(.6);
   }
   .MenuContents {
+    
     .chineseMenu_header {
       width: 100%;
       text-align: center;
@@ -59,7 +60,7 @@ Chinese Menu
     .CategorySearch {
       border: none !important;
       padding: 0;
-      min-width: 19em;
+      width: 19em;
     }
     .react-search-field-input {
       font-size: 1em!important;
@@ -88,7 +89,7 @@ Chinese Menu
           font-weight: 500;
           border: 2px solid $text-color;
           padding: 0.5em 2em;
-          border-radius: 5px;
+          border-radius: 32px;
           display: flex;
           justify-content: center;
           text-decoration: none;
@@ -183,7 +184,7 @@ Chinese Menu
   .chineseMenu {
     .MenuContents {
       .CategorySearch {
-        width: 15em;
+        width: 15em !important;
         min-width: 15em !important;
       }
     }
@@ -334,11 +335,16 @@ Thai Menu
       width: 100%;
       padding: 2em  .5em ;
       margin:0 !important;
+      .col-12 {
+        margin-top: 2em;
+      }
       .ThaiCategory {
         color: $text-color;
         width: 100%;
         text-align:center;
-        margin-bottom: 2rem;
+      }
+      .category_sub {
+        width: 100%;
       }
       .thaiItems{
         &__header {

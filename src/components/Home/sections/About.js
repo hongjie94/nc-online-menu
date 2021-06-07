@@ -13,8 +13,16 @@ const About = () => {
       menus. As of COVID-19 Restaurant Move To a Takeout-Only Model. 
       </p>
       <div className="aboutButtons">
-        <a href="/ChineseMenu" className="menuOptions">Chinese Menu</a>
-        <a href="/ThaiMenu" className="menuOptions">Thai Menu</a>
+        <div className="aboutButton">
+          <a href="/ChineseMenu">
+            <p><span className="bg"></span><span className="base"></span><span className="text">Chinese Menu</span></p>
+          </a>
+        </div>  
+        <div className="aboutButton">
+          <a href="/ThaiMenu">
+            <p><span className="bg"></span><span className="base"></span><span className="text">Thai Menu</span></p>
+          </a>
+        </div> 
       </div>
   </section>
   )
