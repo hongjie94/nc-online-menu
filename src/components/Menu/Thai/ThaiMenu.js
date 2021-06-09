@@ -101,7 +101,6 @@ const ThaiMenu = () => {
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>

@@ -103,6 +103,11 @@ Hero section
       .dropdown-menu {
         a {
           color: black;
+        } 
+      }
+      .dropdown-item {
+        &:active {
+          background-color: transparent;
         }
       }
       #Dropdown {
@@ -113,6 +118,7 @@ Hero section
         font-weight: 500;
         margin-top: 1em;
         border-radius: 5px;
+        
         &:focus {
           border: none;
           box-shadow: none;

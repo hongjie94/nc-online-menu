@@ -1,6 +1,7 @@
 import fishImage from '../../../images/Home/fish.png'
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown'
+import { Link} from 'react-router-dom';
 const Hero = () => {
 
     return (
@@ -28,10 +29,10 @@ const Hero = () => {
              
                 <DropdownButton id="Dropdown" title="View Menu"> 
                   <Dropdown.Item as="button">
-                    <a className="nav-item nav-link" href="/ChineseMenu">Chinese Menu</a>
+                    <Link className="nav-item nav-link" to="/ChineseMenu">Chinese Menu</Link>
                   </Dropdown.Item>
                   <Dropdown.Item as="button">
-                    <a  className="nav-item nav-link" href="/ThaiMenu">Thai Menu</a>
+                    <Link  className="nav-item nav-link" to="/ThaiMenu">Thai Menu</Link>
                   </Dropdown.Item>
                 </DropdownButton>
             </div> 
