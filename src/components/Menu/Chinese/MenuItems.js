@@ -12,8 +12,7 @@ const MenuItems = ({Category, SearchInput}) => {
         { CategoryItems && 
       
           <div className="col-lg-8 MenuItems">
-            {/* <h1 onClick={tes}>dsadsa</h1> */}
-
+       
           {SearchResults && 
             <>
               { SearchResults.length < 1 && SearchInput !== '' &&

@@ -4,10 +4,15 @@ Hero section
 
 // Hero main div
 .Hero{
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.0)), 
-              url('/images/Home/hero.jpeg') center center;
+  background-image:  linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.0)), 
+  url('/images/Home/hero.png');
+  background-color: #E2E2E2;
+              // linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.0)), 
+              // url('/images/Home/hero.jpeg') center center;
+  background-position: left bottom;            
   height: 88vh;
-  background-size: cover;
+  background-size: 50%;
+  background-repeat: no-repeat;
   padding: 0.5rem 1em;
   display: flex;
   justify-content: center;
@@ -17,34 +22,60 @@ Hero section
     display: flex;
     justify-content: center;
     align-items: center;
-    // Fish image 1
-    .fishImage{
+
+    // leaves image
+    .leaves{
       display: flex;
       justify-content: center;
       align-items: center;
       transform: rotate(-215deg);
+      opacity: 0;
       img {
         width:100%
       }
     }
-    // Fish image 2
-    .fishImage2{
+    // leaf image
+    .leaf{
+      opacity: 0;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      transform: rotate(325deg);
+      justify-content: flex-start;
+      align-items: baseline;
+      flex-direction: column;
+      transform: translateY(-200px);
+      // transform: rotate(325deg);
       img {
         width:100%
+      }
+      .leaf1 {
+        transform: rotate(160deg);
+        position: absolute;
+        right: -4em;
+        top: -1em;
+       
+        filter: hue-rotate(-37deg);
+      }
+      .leaf2 {
+        position: absolute;
+        right: 7em;
+        top: 8em;
+        filter: hue-rotate(-10deg);
+        transform: rotate(-32deg);
+      }
+      .leaf3 {
+        position: absolute;
+        top: 15em;
+        transform: rotate(130deg);
       }
     }
     // Hero text
     .HeroText {
-      font-family: $main-font;
-      padding-bottom: 1em;
+      font-family: $main-font !important;
+      padding: 2em 0;
+      border-radius: 5px;
       text-align: center;
       margin: auto;
-      padding: 1em;
       display: flex;
+      min-width: 29rem;
       justify-content:center;
       align-items: center;
       flex-direction: column;
@@ -136,11 +167,12 @@ Hero section
 @media screen and (max-width: 991px) {
   .Hero{
     height: 100vh;
+    background-size: 100%;
     &__content {
       .HeroText {
         width: 100vw
       }
-      .fishImage, .fishImage2 {
+      .leaves, .leaf {
         display: none;
       }  
     }  
@@ -249,9 +281,6 @@ Specils section
             width: auto;
             border-radius: 32px;
             background-color: #EFE4CA;
-            background-image: url('/images/Menu/Cnbg.png');
-            background-repeat: no-repeat;
-            background-size: cover;
             cursor: pointer;
             img {
               max-width: 250px;
@@ -324,9 +353,6 @@ Specils section
         margin-bottom: 2em;
         border-radius: 32px;
         background-color: #263238;
-        background-image: url('/images/Menu/thaibg.png');
-        background-repeat: no-repeat;
-        background-size: cover;
         cursor: pointer;
         img {
           width: 100%;
@@ -350,7 +376,9 @@ Specils section
           font-size: 16px !important;
           i {
             margin: 0 5px;
+            color: maroon;
           }
+          
         } 
         p {
           font-weight: 300;
@@ -426,10 +454,12 @@ About section
 
 // About main div
 .About {
-  background-image:  linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
-  url('/images/Home/about.jpeg');
-  background-position: center center;
-  background-size: cover;
+  background-image:  linear-gradient(to right, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), 
+  url('/images/Home/about.png');
+  background-color: #D3D3D3;
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -440,6 +470,7 @@ About section
     font-family: $logo-font;
     font-size: 4.5em;
     margin-bottom: .5em;
+    margin-top: 1em;
   }
   p {
     text-align: center;
@@ -525,6 +556,7 @@ About section
 
 @media all and (max-width: 700px){
   .About {
+    background-size: 70%;
     p {
       padding: .5em;
     }
@@ -552,12 +584,14 @@ Quote section
 // Quote main div
 .Quote {
   background: $text-color;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/images/Home/quote.png');
-  background-position: center center;
-  background-size: cover;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1)), url('/images/Home/quote.png');
+  background-position: right bottom;
+  background-size: 40%;
+  background-repeat: no-repeat;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  min-height: 70vh;
   display: flex;
   padding: 2em clamp(2em, 10vw, 8em);
   color: #dfdcd5;
@@ -566,14 +600,14 @@ Quote section
   // Quote content and Quote author
   &__content, &__author  {
     font-style: normal;
-    font-size: clamp(1em, 2.5vw, 1.5em);
+    font-size: clamp(1em, 2.5vw, 2em);
     line-height: 2;
     font-family: $script;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     text-align: center;
   }
   &__content {
-    padding: 1em 2em;
+    padding: 1em;
   }
 
   
@@ -582,13 +616,15 @@ Quote section
 // Reponsive design
 @media (max-width: 768px) {
   .Quote { 
+    background-size: 65%;
     &__content {
       font-size: 20px;
       letter-spacing: 3px;
+      padding: 0;
     }
     &__author {
       font-size: 20px;
-      padding: 2em;
+      padding: .5em;
       letter-spacing: 3px;
       margin-bottom: 0;
     }

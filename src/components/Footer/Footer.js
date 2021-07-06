@@ -1,4 +1,4 @@
-import logo from '../../images/logo.png';
+import logo from '../../images/logo.svg';
 import { FaFacebook } from "react-icons/fa";
 const Footer = () => {
     return (

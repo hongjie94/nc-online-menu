@@ -5,7 +5,6 @@ import animation from '../Animations';
 
 const Contact = () => {
   animation("Contact");
- 
   return (
     <div className="Contact">
       <div className="container">

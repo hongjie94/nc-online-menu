@@ -4,10 +4,9 @@
   padding: 2em;
   min-height: 100vh;
   .Contactbg {
-    background:
-    url('/images/Contact/contactBg.png') no-repeat center center;
+    background: url('/images/Contact/ContactBg.jpg');
     background-size: cover;
-    min-height: 16em;
+    min-height: 20em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,7 +112,7 @@
 @media (max-width:800px) {
   .Contact {
     .Contactbg {
-      background-size: contain;
+      background-size: cover;
       min-height: 10em;
       align-items: flex-end;
     }

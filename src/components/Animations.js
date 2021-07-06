@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
-import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { gsap } from "gsap";
+
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -25,6 +26,7 @@ const Animation = (name) => {
     */ 
    if( name ==="Home") {
     setHomeAnimation( 
+  
       // Animation for Hero section
       gsap.fromTo(".Hero", { css: { visibility: 'invisible', opacity: 0}},
       {duration: 0, css: { visibility: 'visible', opacity: 1}}),
@@ -32,12 +34,17 @@ const Animation = (name) => {
       gsap.fromTo(".HeroText",{opacity: 0 }, 
       { duration: 2, y: 0, opacity: 1, ease: "back"}),
 
-      gsap.fromTo(".fishImage",{ opacity: 0 },
+      gsap.fromTo(".leaves",{ opacity: 0.5 },
       { duration: 2, y: 0, opacity: 1, rotation: 685, ease: "power1"}),
 
-      gsap.fromTo(".fishImage2", { opacity: 0 },
-      { duration: 2, y: 0, opacity: 1, rotation: 505,  ease: "power1"}),
-
+      gsap.fromTo(".leaf",{ opacity: 0,  left: Math.random() * 300 },
+      { duration: 2, 
+        y: 0,
+        opacity: 1, 
+        left: 0,
+        ease: "power1.easeInOut "}
+      ),
+      
       // Animation for Specils section
       ScrollTrigger.matchMedia({
         "(min-width: 992px)" : () => {
@@ -105,7 +112,7 @@ const Animation = (name) => {
         }
       }),
 
-    // Animation for About section
+      // Animation for About section
       gsap.fromTo(".aboutText", {opacity: 0, scale: 0.01},
         {duration: 1.5,  opacity: 1 , scale: 1, 
           scrollTrigger: {
@@ -123,7 +130,7 @@ const Animation = (name) => {
           }
         }),
 
-    // Animation for Quote section
+      // Animation for Quote section
       gsap.fromTo(".Quote", { y: "-100%"},
         {duration: 1, y: 0}),
       gsap.fromTo(".Quote__content, .Quote__author", {opacity: 0, scale: 0.01},
@@ -137,10 +144,10 @@ const Animation = (name) => {
   }
     
 
-    /*
-    Animation for Contact Page
-    */ 
-   if(name ==="About") {
+  /*
+  Animation for Contact Page
+  */ 
+  if(name ==="About") {
     setAboutAnimation(
       gsap.fromTo(".aboutText", {opacity: 0, scale: 0.01},
         {duration: 1.5,  opacity: 1 , scale: 1, 
@@ -159,31 +166,38 @@ const Animation = (name) => {
           }
         })
     );
-   }
+  }
 
 
-    /*
-    Animation for Menu Page
-    */ 
-   if(name ==="ChineseMenu") {
+  /*
+  Animation for Menu Page
+  */ 
+  if(name ==="ChineseMenu") {
     setChineseMenuAnimation(
-      gsap.fromTo(".MenuContents", { scale: 0.05, opacity: 0},
-      {duration: 1, opacity: 1, scale: 1})
+      gsap.fromTo(".hederText", { x: "-100%", opacity: 0},
+      {duration: 1, opacity: 1, x: 0}),
+      gsap.fromTo(".CNmenu", { y: "100%", opacity: 0},
+      {duration: 1, opacity: 1, y: 0})
     );
-   }
+  }
 
-   if(name ==="ThaiMenu") {
+  if(name ==="ThaiMenu") {
     setThaiMenuAnimation(
-      gsap.fromTo(".thaiMenu__content", { scale: 0.05, opacity: 0},
+      gsap.fromTo(".headerText", { x: "-100%", opacity: 0},
+      {duration: 1, opacity: 1,  x: 0}),
+
+      gsap.fromTo(".thaiMenuCarousel", { x: "100%", opacity: 0},
+      {duration: 1.3, opacity: 1,  x: 0}),
+      
+      gsap.fromTo(".row", { scale: 0.05, opacity: 0},
       {duration: 1, opacity: 1, scale: 1})
     );
-   }
+  }
 
-
-    /*
-    Animation for Contact Page
-    */ 
-   if(name ==="Contact") {
+  /*
+  Animation for Contact Page
+  */ 
+  if(name ==="Contact") {
     setContactAnimation(
       gsap.fromTo(".Contactbg", { scale: 0.01, opacity: 0},
       {duration: 1, opacity: 1, scale: 1}),
@@ -191,7 +205,7 @@ const Animation = (name) => {
       gsap.fromTo(".contactInfo", { y: "100%", opacity: 0},
         {duration: 1, opacity: 1, y: 0}),
     );
-   }
+  }
 
   }, [name]);
     return { HomeAnimation, AboutAnimation, ChineseMenuAnimation, ThaiMenuAnimation, ContactAnimation } 

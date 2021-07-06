@@ -3,9 +3,7 @@
 Chinese Menu
 */
 .chineseMenu {
-  background-image: url('/images/Menu/CNmenubg.jpeg');
-  background-position: center center;
-  background-size: contain;
+  background: #F9F1D7;
   color: $text-color;
   padding: 2em;
   min-height: 80vh;
@@ -13,18 +11,18 @@ Chinese Menu
     filter: contrast(.6);
   }
   .MenuContents {
-    
     .chineseMenu_header {
       width: 100%;
       text-align: center;
       margin-bottom: 3em;
       padding: 2em auto;
       background-color: transparent;
-      background: linear-gradient(to right, rgba(224, 210, 210, 0.2), rgba(0, 0, 0, 0.0)),
-      url('/images/Menu/cnHeader.png') no-repeat center center;
+      background: linear-gradient(to right, rgba(224, 210, 210, 0.0), rgba(0, 0, 0, 0.0)),
+      url('/images/Menu/CnMenu/CnMenuBg.jpg') no-repeat center center;
       background-size: cover;
       min-height: 15em;
       display: flex;
+      transform: none !important;
       justify-content: center;
       flex-direction: column;
       align-items: flex-start;
@@ -33,8 +31,8 @@ Chinese Menu
       }
       h1 {
         font-family: $logo-font;
-        font-size: 3em;
-        padding: 0 .5em;
+        font-size: 3.3em;
+        padding: 0;
         margin-bottom: 0;
       }
       .lunchTime {
@@ -65,6 +63,7 @@ Chinese Menu
     .react-search-field-input {
       font-size: 1em!important;
       font-weight: 200!important;
+      border-radius: 0!important;
     }
     .react-search-field-button {
       border-right: 1px solid rgb(221, 221, 221) !important;
@@ -223,14 +222,6 @@ Chinese Menu
           color: $text-color;
           font-weight: 500;
         }
-        .rdn-drop-menu-option, 
-        .rdn-drop-menu-group-option, 
-        .rdn-selection-menu-option, 
-        .rdn-selection-menu-group-option {
-          background-image: url('/images/Menu/CNmenubg.jpeg');
-          background-position: center center;
-          background-size: contain;
-        }
       }
     }
   }
@@ -298,7 +289,9 @@ Thai Menu
   }
   .headerText {
     padding: 1em;
-    background:linear-gradient(to right, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, .01));
+    background: radial-gradient(black, transparent);
+    margin-left: 2em;
+    border-radius: 32px;
     h1 {
       text-align: initial;
       width: 100%;
@@ -404,13 +397,67 @@ Thai Menu
     }
   }
 }
-
+.rec-carousel {
+  padding: 2em 1em 0 1em;
+  button {
+    background-color: rgba(141, 27, 71, 0.1);
+    &:hover {
+      background-color: $text-color !important;
+    }
+  }
+}
+.rec-dot_active {
+  background-color: $text-color !important;
+  box-shadow: 0 0 1px 3px darken($text-color, 5%) !important;
+}
+.cGKbZh:hover:enabled, .cGKbZh:focus:enabled {
+  background-color: $text-color !important;
+}
+.jLgnwX:hover, .jLgnwX:focus {
+  cursor: pointer;
+  box-shadow: 0 0 1px 3px  $text-color !important;
+}
+.sliderImgs {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 2em;
+  img {
+    width: 100%;
+  }
+  p {
+    margin: 1em auto !important;
+  }
+}
 @media screen and (max-width: 991px) {
   .thaiMenu {
     &__headerImg {
       img {
         width: 100%;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .headerText {
+    padding: 1em;
+    background: radial-gradient(black, transparent);
+    margin-left: 0em !important;
+    border-radius: unset !important;
+    width: 100%;
+    h1 {
+      text-align: center !important;
+    }
+  }
+}
+
+@media screen and (max-width: 317px) {
+  .headerText {
+    h1 {
+     font-size: 2em !important;
+    }
+    span {
+      font-size: 1em !important;
     }
   }
 }

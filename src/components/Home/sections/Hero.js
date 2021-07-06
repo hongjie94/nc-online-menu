@@ -1,15 +1,19 @@
-import fishImage from '../../../images/Home/fish.png'
+
+import leavesImg from '../../../images/Home/leaves.png';
+import leafImg from '../../../images/Home/leaf.png';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-import Dropdown from 'react-bootstrap/Dropdown'
+import Dropdown from 'react-bootstrap/Dropdown';
 import { Link} from 'react-router-dom';
 const Hero = () => {
+
+
 
     return (
         <section className="Hero">
           <div className="Hero__content container">
             <div className="row">
-            <div className="fishImage col-md-2 col-lg-3"> 
-              <img src={fishImage} alt="fishIage"/>
+            <div className="leaves col-md-2 col-lg-3"> 
+              <img src={leavesImg} alt="leaves"/>
             </div>
 
             <div className="HeroText col-12 col-md-8 col-lg-6"> 
@@ -37,8 +41,15 @@ const Hero = () => {
                 </DropdownButton>
             </div> 
 
-            <div className="fishImage2 col-md-2 col-lg-3">
-              <img src={fishImage} alt="fishIage"/>  
+            <div className="leaf col-md-2 col-lg-3" id="leaf">
+              {/* <img className="leaf3" src={leaves} alt="fishIage"/>  
+              <img className="leaf2" src={leaves} alt="fishIage"/>  */}
+              <img className="leaf1" src={leafImg} alt="leaf"/> 
+              <div>
+              <img className="leaf2" src={leafImg} alt="leaf"/>  
+              <img className="leaf3" src={leafImg} alt="leaf"/>  
+              </div>
+               
             </div>
             </div>
          </div> 

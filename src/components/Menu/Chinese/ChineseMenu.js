@@ -2,7 +2,7 @@ import { useState } from 'react'
 import MenuItems from './MenuItems';
 import MenuCategory from './MenuCategory';
 import animation from '../../Animations';
-import mark from '../../../images/Menu/mark.png';
+
 
 const ChineseMenu = () => {
 
@@ -16,10 +16,6 @@ const ChineseMenu = () => {
       <div className="chineseMenu">
         <div className="container MenuContents">
           <div className="chineseMenu_header">
-            <div className="header_mark">
-               <img src={mark} alt="search-mark"/>
-            </div>
-           
             <div className="hederText">
               <h1> CHINESE MENU </h1>
                <span className="lunchTime">(Lunch Everday From 11AM-3PM)</span>
@@ -27,8 +23,8 @@ const ChineseMenu = () => {
                <span> <b>Tel :</b><a href="tel:518-673-2380">  518 673 2380</a></span>
             </div>
           </div>
-
-          <div className="row">
+          <div className="CNmenu row">
+        
             <MenuCategory
               setCategory={setCategory}
               setSearchInput= {setSearchInput}

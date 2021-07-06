@@ -1,7 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
-import logo from '../../images/logo.png';
+import logo from '../../images/logo.svg';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-import Dropdown from 'react-bootstrap/Dropdown'
+import Dropdown from 'react-bootstrap/Dropdown';
 import { FaBars } from 'react-icons/fa';
 import { useState } from 'react';
 import { gsap } from 'gsap';

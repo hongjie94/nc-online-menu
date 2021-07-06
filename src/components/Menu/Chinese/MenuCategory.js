@@ -4,7 +4,6 @@ import 'react-dropdown-now/style.css';
 import SearchField from "react-search-field";
 
 
-
 const MenuItems = ({setCategory, setSearchInput}) => {
 
   // Get category names from data
@@ -15,24 +14,20 @@ const MenuItems = ({setCategory, setSearchInput}) => {
   // Rmove duplicates names
   const CategoryNames = [...new Set(getCategoryNames)];  
 
-
-  const test = (e) => {
-    console.log(e)
-  }
-
+  
   return (
     <> 
       { CategoryNames && <div className="col-lg-4 MenuCategory">
-        {/* <h1 onClick={test}>Chinese Menu</h1> */}
-      <div className="CategorySearchdiv">
-        <SearchField
-          placeholder="Search Menu Items..."
-          onChange={(e)=> {
-            setSearchInput(e)
-          }}
-          classNames="CategorySearch mb-4"
-        />
-      </div>
+
+        <div className="CategorySearchdiv">
+          <SearchField
+            placeholder="Search Menu Items..."
+            onChange={(e)=> {
+              setSearchInput(e)
+            }}
+            classNames="CategorySearch mb-4"
+          />
+        </div>
 
         <div className="MobileCategory">
           <Dropdown
@@ -58,7 +53,6 @@ const MenuItems = ({setCategory, setSearchInput}) => {
                 name={allCategoryName}
                 href={`#${allCategoryName}`}
                 onClick={e => {
-                  test(e);
                   setCategory(e.target.innerText);
                   setSearchInput('');
                 }}>

@@ -6,6 +6,7 @@ Navbar
   box-shadow: 0 4px 4px rgba(0,0,0,.1);
   padding: 0 !important;
   height: 12vh;
+  transform: none !important;
   // Logo
   .navbar-brand {
     margin: auto 1em;
@@ -15,14 +16,13 @@ Navbar
     color: $text-color;
     // Logo image
     img {
-      width: 50%;
-      padding: 10px;
-      padding-bottom: 1rem;
+      width: 5em;
+      margin-right: -16px;
     }
     // Logo text
     h1 {
       font-weight: 800;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
       font-size: 2.5rem;
       margin-bottom: 0;
       padding: 0;
