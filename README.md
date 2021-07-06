@@ -1,3 +1,12 @@
+# Technologies Used
+React
+Bootstrap
+CSS3
+HTML5
+Gsap(Animation)
+Firebase(Hosting)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
