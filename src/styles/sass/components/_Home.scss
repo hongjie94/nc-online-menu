@@ -7,8 +7,6 @@ Hero section
   background-image:  linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.0)), 
   url('/images/Home/hero.png');
   background-color: #E2E2E2;
-              // linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.0)), 
-              // url('/images/Home/hero.jpeg') center center;
   background-position: left bottom;            
   height: 88vh;
   background-size: 50%;
@@ -302,6 +300,10 @@ Specils section
             h5, span {
               font-weight: 400;
               font-size: 16px !important;
+              i {
+                margin: 0 5px;
+                color: maroon;
+              }
             }
             p {
               font-weight: 300;
@@ -584,7 +586,7 @@ Quote section
 // Quote main div
 .Quote {
   background: $text-color;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1)), url('/images/Home/quote.png');
+  background-image: url('/images/Home/quote.png');
   background-position: right bottom;
   background-size: 40%;
   background-repeat: no-repeat;

@@ -11,7 +11,6 @@ const Contact = () => {
         <div className="Contactbg mb-5">
           <h1> Contact us</h1>
         </div>
-
         <div className="row contactInfo">
           <ContactInfo />
         </div>

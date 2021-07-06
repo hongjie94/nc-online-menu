@@ -311,7 +311,7 @@ Thai Menu
         text-decoration: none;
         color: $text-color;
         &:hover {
-          color:  black;
+          color:  white;
         }
       }
     }
@@ -423,6 +423,7 @@ Thai Menu
   margin-bottom: 2em;
   img {
     width: 100%;
+    filter: brightness(1.2);
   }
   p {
     margin: 1em auto !important;
@@ -437,11 +438,12 @@ Thai Menu
     }
   }
 }
-
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 716px) {
+  .thaiMenu {
+    padding-top: 0 !important;
+  }
   .headerText {
-    padding: 1em;
-    background: radial-gradient(black, transparent);
+    padding: 3em 0 !important;
     margin-left: 0em !important;
     border-radius: unset !important;
     width: 100%;
