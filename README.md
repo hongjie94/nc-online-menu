@@ -1,11 +1,13 @@
 # Technologies Used
-React
-Bootstrap
-CSS3
-HTML5
-Gsap(Animation)
-Firebase(Hosting)
+* React
+* Bootstrap
+* CSS3
+* HTML5
+* Gsap(Animation)
+* Firebase(Hosting)
 
+## App-Diagram
+![Screenshot](/Diagram.png)
 
 # Getting Started with Create React App
 
