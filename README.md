@@ -6,7 +6,7 @@
 * Gsap(Animation)
 * Firebase(Hosting)
 
-## App-Diagram (https://newchinapalatine.com/)
+## App-Diagram [http://www.newchinapalatine.com](https://newchinapalatine.com/)
 ![Screenshot](/Diagram.png)
 
 # Getting Started with Create React App
