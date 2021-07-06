@@ -1,8 +1,9 @@
 # Technologies Used
 * React
-* Bootstrap
 * CSS3
 * HTML5
+* Bootstrap
+* Sass
 * Gsap(Animation)
 * Firebase(Hosting)
 
