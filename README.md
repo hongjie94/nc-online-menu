@@ -9,7 +9,7 @@
 
 ## App-Diagram 
 ### [http://www.newchinapalatine.com](https://newchinapalatine.com/)
-![Screenshot](/Diagram.png)
+![Screenshot](./Diagram.png)
 
 # Getting Started with Create React App
 
