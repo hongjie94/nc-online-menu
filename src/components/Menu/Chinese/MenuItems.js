@@ -1,11 +1,9 @@
 import ToggleCategory from './ToggleCategory'
-import animation from '../../Animations'
 
 const MenuItems = ({Category, SearchInput}) => {
 
-  
   const { CategoryItems, HideSize, WithRice, SearchResults } = ToggleCategory(Category, SearchInput);
-  animation(Category);
+ 
 
     return (
       <>
